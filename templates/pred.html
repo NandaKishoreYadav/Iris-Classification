@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='pred.css') }}">
+</head>
+<body>
+    {% if ans=='Iris-setosa' %}
+    <div class="area">
+        <h1>Iris-setosa</h1><br><br>
+        <img src="static/setosa.jpeg" alt="Setosa" width="300" height="300">
+        <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/">Back</a>
+    </div>
+    {% elif ans=='Iris-virginica' %}
+    <div class="area">
+        <h1>Iris-virginica</h1><br><br>
+        <img src="static\virginica.jpeg" alt="Virginica" width="300" height="300">
+        <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/">Back</a>
+    </div>
+    {% else %}
+    <div class="area">
+        <h1>Iris-versicolor</h1><br><br>
+        <img src="static\versicolor.jpeg" alt="versicolor" width="300" height="300">
+        <br><br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/">Back</a>
+    </div>
+    {% endif %}
+</body>
+</html>

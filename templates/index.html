@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <form action="{{url_for('predict')}}" method="post">
+            <h1>Iris Flower Species Prediction</h1>
+            <div class="area">
+                <input type="text" name="sl" id="sl" placeholder="Enter Sepal Length">   
+                <br><br>
+                <input type="text" name="sw" id="sw" placeholder="Enter Sepal Width">   
+                <br><br>
+                <input type="text" name="pl" id="pl" placeholder="Enter Petal Length">  
+                <br><br> 
+                <input type="text" name="pw" id="pw" placeholder="Enter Petal Width"> 
+                <br><br>
+            </div>
+            <button type="submit">Predict</button>
+        </form> 
+    </div>
+    <h3>{{ans}}</h3>
+</body>
+</html>
